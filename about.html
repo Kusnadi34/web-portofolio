@@ -1,0 +1,234 @@
+<!-- Subscribe Tamzidan Madiyin di YouTube -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>About | Nana Kusnadi</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Nana <span>Kusnadi</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link active" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skill.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="service.html">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contact.html">Contact</a></div>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skill.html">Skills</a>
+                <a href="service.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="about-container">
+        <div class="about-content" id="aboutContent">
+            <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
+                <h1>About Me</h1>
+            </div>
+            <div class="about-grid">
+                <div class="about-image" data-aos="fade-right" data-aos-duration="1500">
+                    <img src="img/img-profile.jpg" alt="Nana Kusnadi Profile">
+                </div>
+                <div class="about-text" data-aos="fade-left" data-aos-duration="1500">
+                    <h2>Who Am I?</h2>
+                    <p>I'm a <strong>Front-End Developer</strong> with a strong foundation in modern web technologies. I transitioned from a sales and marketing background into software engineering through an intensive, industry-recognized bootcamp at Dicoding Academy.</p>
+                    <p>I specialize in building <strong>Progressive Web Apps (PWA)</strong>, <strong>Web Components</strong>, and integrating <strong>Client-Side AI (TensorFlow.js)</strong>. My work focuses on delivering high-performance, accessible, and user-centric web solutions that drive measurable business impact.</p>
+                    <div class="stats">
+                        <!-- Stat 1: Certifications -->
+                        <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="200" onclick="showCertifications()">
+                            <h3>10+</h3>
+                            <p>Certifications</p>
+                        </div>
+                        <!-- Stat 2: Live Projects (sebelumnya Training Hours) -->
+                        <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400" onclick="showProjects()">
+                            <h3>2+</h3>
+                            <p>Live Projects</p>
+                        </div>
+                        <!-- Stat 3: Work Experience (sebelumnya Live Projects) -->
+                        <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600" onclick="showExperience()">
+                            <h3>1+</h3>
+                            <p>Work Experience</p>
+                        </div>
+                        <!-- Stat 4: Tech Stack -->
+                        <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800" onclick="showSkillsSummary()">
+                            <h3>12+</h3>
+                            <p>Tech Stack</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 0 });
+
+        const certifications = [
+            { name: "Cloud and Gen AI at AWS", link: "https://dicoding.com/certificates/81P2O1NKNZOY" },
+            { name: "Back-End Pemula JavaScript", link: "https://dicoding.com/certificates/4EXG16R5DPRL" },
+            { name: "Dasar Pemrograman JavaScript", link: "https://dicoding.com/certificates/MRZM66G6KPYQ" },
+            { name: "Dasar Pemrograman Web", link: "https://dicoding.com/certificates/10P8JOY7LPQK" },
+            { name: "Fundamental Front-End Web", link: "https://dicoding.com/certificates/NVP7NGQ4VZRO" },
+            { name: "Memulai Pemrograman Python", link: "https://dicoding.com/certificates/RVZKW334OZD5" },
+            { name: "Front-End Web untuk Pemula", link: "https://dicoding.com/certificates/RVZKGQQ1OXD5" },
+            { name: "Penerapan AI di Aplikasi Web", link: "https://dicoding.com/certificates/72ZDJLOJZYW" },
+            { name: "Toolset Pengembangan Front-End", link: "https://dicoding.com/certificates/GRX50K8QYZOM" },
+            { name: "Pengembangan Web Intermediate", link: "https://dicoding.com/certificates/72ZDJ5RELZYw" }
+        ];
+
+        function showCertifications() {
+            const aboutContent = document.getElementById('aboutContent');
+            aboutContent.innerHTML = `
+                <button class="back-button" onclick="restoreInitialContent()">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+                <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
+                    <h1>My Certifications</h1>
+                    <p style="color:#a8b2c8;">AWS-validated professional certifications from Dicoding Academy</p>
+                </div>
+                <div class="content-grid">
+                    ${certifications.map(cert => `
+                        <div class="content-card" data-aos="fade-up">
+                            <h3><i class="fas fa-certificate" style="color:#4facfe;margin-right:10px;"></i>${cert.name}</h3>
+                            <div class="cert-link">
+                                <a href="${cert.link}" target="_blank">${cert.link}</a>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            AOS.refresh();
+        }
+
+        function showProjects() {
+            const aboutContent = document.getElementById('aboutContent');
+            aboutContent.innerHTML = `
+                <button class="back-button" onclick="restoreInitialContent()">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+                <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
+                    <h1>My Projects</h1>
+                </div>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>AI Computer Vision Web App</h3>
+                        <p>Real-time object classification PWA using TensorFlow.js. 95/100 Lighthouse score, 100% offline.</p>
+                        <a href="https://profound-tartufo-7b847a.netlify.app/" target="_blank" style="color:#00f2fe;">Live Demo →</a>
+                    </div>
+                    <div class="content-card">
+                        <h3>Modular Front-End App</h3>
+                        <p>Component-based SPA using pure Web Components, Webpack, and Fetch API. Reduced bundle size by 35%.</p>
+                        <a href="https://kusnadi34.github.io/starter-project-webpack-story-1i/" target="_blank" style="color:#00f2fe;">Live Demo →</a>
+                    </div>
+                    <div class="content-card">
+                        <h3>Bookshelf REST API</h3>
+                        <p>Full CRUD RESTful API built with Node.js, Hapi, and deployed on AWS EC2. Tested with Postman.</p>
+                        <span style="color:#888;">(Private Repository)</span>
+                    </div>
+                </div>
+            `;
+            AOS.refresh();
+        }
+
+        function showExperience() {
+            const aboutContent = document.getElementById('aboutContent');
+            aboutContent.innerHTML = `
+                <button class="back-button" onclick="restoreInitialContent()">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+                <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
+                    <h1>Work Experience</h1>
+                </div>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Marketing & Sales Operations</h3>
+                        <h4 style="color:#a8b2c8;">PT Columbus Megh Adisarana (2015-2016)</h4>
+                        <p>Managed end-to-end sales operations for a major retail chain. Analyzed customer data to drive a 15% increase in sales. Developed transferable skills in data-driven decision making and stakeholder communication.</p>
+                    </div>
+                    <div class="content-card">
+                        <h3>Full-Stack Developer (Bootcamp)</h3>
+                        <h4 style="color:#a8b2c8;">Dicoding Academy & AWS (2025-2026)</h4>
+                        <p>Completed 400+ hours of intensive training. Built and deployed PWA, REST APIs, and AI-integrated web applications.</p>
+                    </div>
+                </div>
+            `;
+            AOS.refresh();
+        }
+
+        function showSkillsSummary() {
+            const aboutContent = document.getElementById('aboutContent');
+            aboutContent.innerHTML = `
+                <button class="back-button" onclick="restoreInitialContent()">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+                <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
+                    <h1>Tech Stack Overview</h1>
+                </div>
+                <div class="content-grid">
+                    <div class="content-card"><h3>🎨 Frontend</h3><p>JavaScript (ES6+), PWA, Web Components, Webpack, WCAG, Responsive Design</p></div>
+                    <div class="content-card"><h3>⚙️ Backend</h3><p>Node.js, Hapi.js, RESTful API, AWS EC2</p></div>
+                    <div class="content-card"><h3>🤖 AI & ML</h3><p>TensorFlow.js (Computer Vision), Scikit-learn (KNN, Regression, Classification)</p></div>
+                    <div class="content-card"><h3>☁️ Deployment</h3><p>Netlify, Vercel, GitHub Pages, AWS EC2</p></div>
+                </div>
+            `;
+            AOS.refresh();
+        }
+
+        function restoreInitialContent() {
+            const aboutContent = document.getElementById('aboutContent');
+            aboutContent.innerHTML = `
+                <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
+                    <h1>About Me</h1>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image" data-aos="fade-right" data-aos-duration="1500">
+                        <img src="img/img-profile.jpg" alt="Nana Kusnadi Profile">
+                    </div>
+                    <div class="about-text" data-aos="fade-left" data-aos-duration="1500">
+                        <h2>Who Am I?</h2>
+                        <p>I'm an <strong>AWS-validated Full-Stack JavaScript Developer</strong> with a strong foundation in modern web technologies. I transitioned from a sales and marketing background into software engineering through an intensive, industry-recognized bootcamp at Dicoding Academy.</p>
+                        <p>I specialize in building <strong>Progressive Web Apps (PWA)</strong>, <strong>Web Components</strong>, and integrating <strong>Client-Side AI (TensorFlow.js)</strong>. My work focuses on delivering high-performance, accessible, and user-centric web solutions.</p>
+                        <div class="stats">
+                            <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="200" onclick="showCertifications()">
+                                <h3>10+</h3>
+                                <p>Certifications</p>
+                            </div>
+                            <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400" onclick="showProjects()">
+                                <h3>2+</h3>
+                                <p>Live Projects</p>
+                            </div>
+                            <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600" onclick="showExperience()">
+                                <h3>1+</h3>
+                                <p>Work Experience</p>
+                            </div>
+                            <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800" onclick="showSkillsSummary()">
+                                <h3>12+</h3>
+                                <p>Tech Stack</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            AOS.refresh();
+        }
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!-- Subscribe Tamzidan Madiyin di YouTube -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact | Nana Kusnadi</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Nana <span>Kusnadi</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skill.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="service.html">Projects</a></div>
+                <div class="link active" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contact.html">Contact</a></div>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skill.html">Skills</a>
+                <a href="service.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="contact-container">
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-header" data-aos="fade-right" data-aos-duration="1500">
+                    <h1>Get in Touch</h1>
+                    <p>Feel free to reach out to me for any questions or opportunities.</p>
+                </div>
+                <div class="contact-details">
+                    <!-- WhatsApp -->
+                    <div class="contact-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/6283116494947?text=Halo%20Nana%2C%20saya%20tertarik%20dengan%20portofolio%20Anda" 
+                               target="_blank" 
+                               style="color: #00f2fe; text-decoration: none; transition: 0.3s ease;"
+                               onmouseover="this.style.color='#4facfe'"
+                               onmouseout="this.style.color='#00f2fe'">
+                                +62 831 1649 4947
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <a href="mailto:nanakusnadi035@gmail.com?subject=Halo%20Nana%20-%20Tertarik%20dengan%20Portofolio%20Anda&body=Halo%20Nana%2C%0A%0ASaya%20tertarik%20dengan%20portofolio%20Anda%20dan%20ingin%20berdiskusi%20lebih%20lanjut.%0A%0ATerima%20kasih." 
+                               style="color: #00f2fe; text-decoration: none; transition: 0.3s ease;"
+                               onmouseover="this.style.color='#4facfe'"
+                               onmouseout="this.style.color='#00f2fe'">
+                                nanakusnadi035@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="contact-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="600">
+                        <div class="contact-icon">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <a href="https://www.google.com/maps/search/Indramayu+West+Java+Indonesia" 
+                               target="_blank" 
+                               style="color: #00f2fe; text-decoration: none; transition: 0.3s ease;"
+                               onmouseover="this.style.color='#4facfe'"
+                               onmouseout="this.style.color='#00f2fe'">
+                                Indramayu, West Java, Indonesia
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800">
+                    <a href="https://github.com/Kusnadi34" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nana-kusnadi?trk=contact-info" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/NanaKusnadi14" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/nanakusnadi035?igsi=ZGUzMzM3NWJiOQ==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">
+                <form action="https://formspree.io/f/mwppavbk" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 0 });
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
