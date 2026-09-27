@@ -50,22 +50,18 @@
                     <p>I'm a <strong>Front-End Developer</strong> with a strong foundation in modern web technologies. I transitioned from a sales and marketing background into software engineering through an intensive, industry-recognized bootcamp at Dicoding Academy.</p>
                     <p>I specialize in building <strong>Progressive Web Apps (PWA)</strong>, <strong>Web Components</strong>, and integrating <strong>Client-Side AI (TensorFlow.js)</strong>. My work focuses on delivering high-performance, accessible, and user-centric web solutions that drive measurable business impact.</p>
                     <div class="stats">
-                        <!-- Stat 1: Certifications -->
                         <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="200" onclick="showCertifications()">
                             <h3>10+</h3>
                             <p>Certifications</p>
                         </div>
-                        <!-- Stat 2: Live Projects (sebelumnya Training Hours) -->
                         <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400" onclick="showProjects()">
-                            <h3>2+</h3>
+                            <h3>3+</h3>
                             <p>Live Projects</p>
                         </div>
-                        <!-- Stat 3: Work Experience (sebelumnya Live Projects) -->
                         <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600" onclick="showExperience()">
                             <h3>1+</h3>
                             <p>Work Experience</p>
                         </div>
-                        <!-- Stat 4: Tech Stack -->
                         <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800" onclick="showSkillsSummary()">
                             <h3>12+</h3>
                             <p>Tech Stack</p>
@@ -127,20 +123,47 @@
                     <h1>My Projects</h1>
                 </div>
                 <div class="content-grid">
-                    <div class="content-card">
-                        <h3>AI Computer Vision Web App</h3>
-                        <p>Real-time object classification PWA using TensorFlow.js. 95/100 Lighthouse score, 100% offline.</p>
-                        <a href="https://profound-tartufo-7b847a.netlify.app/" target="_blank" style="color:#00f2fe;">Live Demo →</a>
+                    <!-- Project 1: AI Computer Vision -->
+                    <div class="content-card" data-aos="fade-up">
+                        <h3><i class="fas fa-eye" style="color:#4facfe;margin-right:10px;"></i>AI Computer Vision Web App</h3>
+                        <p>Real-time object classification PWA running TensorFlow.js entirely in the browser. Achieved 95/100 Lighthouse score and 100% offline functionality with Service Worker.</p>
+                        <div class="project-tech" style="margin-top:0.8rem;justify-content:flex-start;">
+                            <span class="tech-tag">TensorFlow.js</span>
+                            <span class="tech-tag">PWA</span>
+                            <span class="tech-tag">Web Components</span>
+                            <span class="tech-tag">Netlify</span>
+                        </div>
+                        <a href="https://profound-tartufo-7b847a.netlify.app/" target="_blank" style="color:#00f2fe;display:inline-block;margin-top:0.8rem;">Live Demo →</a>
                     </div>
-                    <div class="content-card">
-                        <h3>Modular Front-End App</h3>
-                        <p>Component-based SPA using pure Web Components, Webpack, and Fetch API. Reduced bundle size by 35%.</p>
-                        <a href="https://kusnadi34.github.io/starter-project-webpack-story-1i/" target="_blank" style="color:#00f2fe;">Live Demo →</a>
+
+                    <!-- Project 2: Modular Front-End App -->
+                    <div class="content-card" data-aos="fade-up">
+                        <h3><i class="fas fa-cubes" style="color:#4facfe;margin-right:10px;"></i>Modular Front-End App</h3>
+                        <p>Component-based SPA built with pure Web Components (Custom Elements &amp; Shadow DOM). Configured Webpack from scratch, reducing bundle size by 35%.</p>
+                        <div class="project-tech" style="margin-top:0.8rem;justify-content:flex-start;">
+                            <span class="tech-tag">Web Components</span>
+                            <span class="tech-tag">Webpack</span>
+                            <span class="tech-tag">Fetch API</span>
+                            <span class="tech-tag">GitHub Pages</span>
+                        </div>
+                        <a href="https://kusnadi34.github.io/starter-project-webpack-story-1i/" target="_blank" style="color:#00f2fe;display:inline-block;margin-top:0.8rem;">Live Demo →</a>
                     </div>
-                    <div class="content-card">
-                        <h3>Bookshelf REST API</h3>
-                        <p>Full CRUD RESTful API built with Node.js, Hapi, and deployed on AWS EC2. Tested with Postman.</p>
-                        <span style="color:#888;">(Private Repository)</span>
+
+                    <!-- Project 3: Story App Starter -->
+                    <div class="content-card" data-aos="fade-up">
+                        <h3><i class="fas fa-book-open" style="color:#4facfe;margin-right:10px;"></i>Story App Starter</h3>
+                        <p>Aplikasi web berbagi cerita dengan arsitektur modern: autentikasi lengkap, integrasi Story API, lokalisasi multi-bahasa (EN/ID), dan UI responsif. Dibangun dengan Web Components (Lit), Webpack, Sass, dan Bootstrap. Dilengkapi CI/CD otomatis ke Firebase Hosting dan GitHub Pages.</p>
+                        <div class="project-tech" style="margin-top:0.8rem;justify-content:flex-start;">
+                            <span class="tech-tag">Lit</span>
+                            <span class="tech-tag">Webpack</span>
+                            <span class="tech-tag">Axios</span>
+                            <span class="tech-tag">Sass</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                        </div>
+                        <a href="https://story-app-starter-5d1a2.web.app" target="_blank" style="color:#00f2fe;display:inline-block;margin-top:0.8rem;">Live Demo (Firebase) →</a>
+                        <a href="https://github.com/Kusnadi34/story-app-starter" target="_blank" style="color:#00f2fe;display:inline-block;margin-top:0.8rem;margin-left:1rem;">GitHub →</a>
                     </div>
                 </div>
             `;
@@ -185,7 +208,7 @@
                     <div class="content-card"><h3>🎨 Frontend</h3><p>JavaScript (ES6+), PWA, Web Components, Webpack, WCAG, Responsive Design</p></div>
                     <div class="content-card"><h3>⚙️ Backend</h3><p>Node.js, Hapi.js, RESTful API, AWS EC2</p></div>
                     <div class="content-card"><h3>🤖 AI & ML</h3><p>TensorFlow.js (Computer Vision), Scikit-learn (KNN, Regression, Classification)</p></div>
-                    <div class="content-card"><h3>☁️ Deployment</h3><p>Netlify, Vercel, GitHub Pages, AWS EC2</p></div>
+                    <div class="content-card"><h3>☁️ Deployment</h3><p>Netlify, Vercel, GitHub Pages, AWS EC2, Firebase Hosting</p></div>
                 </div>
             `;
             AOS.refresh();
@@ -203,7 +226,7 @@
                     </div>
                     <div class="about-text" data-aos="fade-left" data-aos-duration="1500">
                         <h2>Who Am I?</h2>
-                        <p>I'm an <strong>AWS-validated Full-Stack JavaScript Developer</strong> with a strong foundation in modern web technologies. I transitioned from a sales and marketing background into software engineering through an intensive, industry-recognized bootcamp at Dicoding Academy.</p>
+                        <p>I'm a <strong>Front-End Developer</strong> with a strong foundation in modern web technologies. I transitioned from a sales and marketing background into software engineering through an intensive, industry-recognized bootcamp at Dicoding Academy.</p>
                         <p>I specialize in building <strong>Progressive Web Apps (PWA)</strong>, <strong>Web Components</strong>, and integrating <strong>Client-Side AI (TensorFlow.js)</strong>. My work focuses on delivering high-performance, accessible, and user-centric web solutions.</p>
                         <div class="stats">
                             <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="200" onclick="showCertifications()">
@@ -211,7 +234,7 @@
                                 <p>Certifications</p>
                             </div>
                             <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400" onclick="showProjects()">
-                                <h3>2+</h3>
+                                <h3>3+</h3>
                                 <p>Live Projects</p>
                             </div>
                             <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600" onclick="showExperience()">
